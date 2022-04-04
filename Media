@@ -1,0 +1,89 @@
+#include <stdio.h>
+
+int main()
+{
+    float matriz [4][4];
+
+    int i,p; /*contador */
+    int prova0,prova1,prova2,prova3;/*contador */
+    char nome0[10],nome1[10],nome2[10],nome3[10];
+    float soma0,soma1,soma2,soma3;
+    soma0=0;
+    soma1=0;
+    soma2=0;
+    soma3=0;
+    for (i=0;i<4;i++)
+    {
+        if (i==0)
+        {
+            prova0=1;
+            printf("Informe o nome do primeiro aluno:");
+            scanf("%s", &nome0);
+            for(p=0;p<4;p++)
+            {
+                printf("Informe a %i nota de %s :",prova0,nome0);
+                scanf("%f", &matriz[i][p]);
+                soma0+=matriz[i][p];
+                prova0++;
+            }
+        }
+
+        if (i==1)
+        {
+            prova1=1;
+            printf("Informe o nome do segundo aluno:");
+            scanf("%s", &nome1);
+            for(p=0;p<4;p++)
+            {
+                printf("Informe a %i nota de %s:",prova1,nome1);
+                scanf("%f", &matriz[i][p]);
+                soma1+=matriz[i][p];
+                prova1++;
+
+            }
+
+        }
+        if (i==2)
+        {
+            prova2=1;
+            printf("Informe o nome do terceiro aluno:");
+            scanf("%s", &nome2);
+            for(p=0;p<4;p++)
+            {
+                printf("Informe a %i nota de %s:",prova2,nome2);
+                scanf("%f", &matriz[i][p]);
+                soma2+=matriz[i][p];
+                prova2++;
+            }
+
+        }
+        if (i==3)
+        {
+            prova3=1;
+            printf("Informe o nome do quarto aluno:");
+            scanf("%s", &nome3);
+            for(p=0;p<4;p++)
+            {
+                printf("Informe a %i nota de %s:",prova3,nome3);
+                scanf("%f", &matriz[i][p]);
+                soma3+=matriz[i][p];
+                prova3++;
+
+            }
+
+
+        }
+
+
+    }
+    float vetor[4];
+    vetor[0]= soma0/4;
+    vetor[1]= soma1/4;
+    vetor[2]= soma2/4;
+    vetor[3]= soma3/4;
+
+    printf("A nota de %s é: %f\nA nota de %s é: %f\nA nota de %s é: %f\nA nota de %s é: %f\n", nome0,vetor[0],nome1,vetor[1],nome2,vetor[2],nome3,vetor[3]);
+
+
+    return 0;
+}
